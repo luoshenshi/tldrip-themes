@@ -1,0 +1,17 @@
+{
+  "name": "Sketchbook Pastel",
+  "author": "Kenzx",
+  "description": "A hand-written pastel notebook style theme",
+  "version": "1.0.0",
+  "css": "style.css",
+  "preview": "preview.png",
+  "assets": {
+    "sketchbook": "assets/sketchbook.png"
+  },
+  "fonts": [
+    {
+      "family": "patrick",
+      "file": "fonts/patrick.ttf"
+    }
+  ]
+}

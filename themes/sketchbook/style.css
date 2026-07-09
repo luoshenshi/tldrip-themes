@@ -1,0 +1,280 @@
+@font-face {
+  font-family: "Patrick Hand";
+  src: url("./fonts/patrick.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Patrick Hand", sans-serif;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+  padding: 40px;
+
+  @top-left {
+    content: normal;
+  }
+
+  background-image: url("./assets/sketchbook.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #4a4458;
+  line-height: 1.8;
+  padding: 40px;
+  max-width: 210mm;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 2.7em;
+  margin-bottom: 14px;
+  color: #6b8b9a;
+  /* swapped */
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.header p {
+  font-size: 1.2em;
+  color: #6b8b9a;
+  /* swapped */
+  font-style: italic;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  color: #7c6f8a;
+  /* swapped */
+  font-size: 1.5em;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+  font-weight: 600;
+  border-bottom: 2px solid #c4d4d8;
+}
+
+blockquote {
+  border: 2px solid #b8a8c4;
+  color: #5d556b;
+  font-style: italic;
+  padding: 15px 24px;
+  margin: 20px 0;
+  border-radius: 6px;
+}
+
+.formula {
+  font-size: 1.15em;
+  border: 2px solid #9aac8b;
+  color: #4a5340;
+  padding: 15px 24px;
+  margin: 20px 0;
+  overflow-x: scroll;
+  border-radius: 6px;
+}
+
+.formula-name {
+  font-weight: 700;
+  color: #9aac8b;
+  margin-bottom: 10px;
+}
+
+.pro-tip {
+  border: 2px solid #a695b5;
+  padding: 15px 24px;
+  margin: 20px 0;
+  border-radius: 6px;
+}
+
+.pro-tip-header {
+  font-weight: 600;
+  color: #a695b5;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.pro-tip-header:before {
+  content: "💡";
+  margin-right: 10px;
+}
+
+.fact-box {
+  border: 2px solid #8ba3a6;
+  padding: 15px 24px;
+  margin: 20px 0;
+  border-radius: 6px;
+}
+
+.fact-header {
+  font-weight: 600;
+  color: #8ba3a6;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.fact-header:before {
+  content: "📚";
+  margin-right: 10px;
+}
+
+.table-container {
+  overflow-x: scroll;
+}
+
+table {
+  width: 100%;
+  margin: 30px 0;
+  border-collapse: collapse;
+  font-family: "Patrick Hand", sans-serif;
+  transform: rotate(-0.5deg);
+  border: 2px solid #c4d4d8;
+  border-radius: 4px;
+}
+
+th,
+td {
+  padding: 14px 18px;
+  text-align: left;
+  line-height: 1.6;
+  color: #4a4458;
+  border: none;
+}
+
+/* Use a background SVG to create a 'wobbly' ink line */
+tbody tr {
+  border-bottom: 1px solid #d9d1e4;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Style the header to look like it has a hand-drawn underline */
+thead th {
+  color: #7c6f8a;
+  font-weight: 600;
+  font-size: 1.15em;
+  position: relative;
+  padding-bottom: 16px;
+  /* Extra space for the underline */
+}
+
+/* The sketchy double underline for the header */
+thead th::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  bottom: 6px;
+  height: 3px;
+  background:
+    linear-gradient(to right, #b8a8c4, #b8a8c4) 0 0 / 100% 1px,
+    linear-gradient(to right, #b8a8c4, #b8a8c4) 0 100% / 100% 1px;
+  background-repeat: no-repeat;
+  transform: rotate(-0.3deg);
+}
+
+ul,
+ol {
+  margin: 20px 0 20px 28px;
+}
+
+li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #4a4458;
+}
+
+h3 {
+  color: #8b7d94;
+  /* swapped */
+  margin: 30px 0 14px 0;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.highlight-text {
+  background: #e8dff3;
+  color: #4a4458;
+  padding: 2px 4px;
+  border-radius: 3px;
+  line-height: 1.7;
+}
+
+.watermark {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  font-size: 0.85em;
+  color: #b3c1c4;
+  opacity: 0.6;
+}
+
+@media screen {
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/sketchbook.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+  }
+}
+
+@media print {
+  @page {
+    background-size: 210mm;
+    background-position: 0 0;
+  }
+
+  .pro-tip,
+  .fact-box,
+  .formula,
+  table,
+  .highlight-text {
+    page-break-inside: avoid;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .highlight-text {
+    background: #e8dff3 !important;
+  }
+
+  .watermark {
+    position: absolute;
+  }
+}
